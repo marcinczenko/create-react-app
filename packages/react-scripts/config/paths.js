@@ -124,8 +124,8 @@ if (checkForMonorepo) {
   // if app is in a monorepo (lerna or yarn workspace), treat other packages in
   // the monorepo as if they are app source
   const mono = findMonorepo(appDirectory);
-  if (mono.isAppIncluded) {
-    Array.prototype.push.apply(module.exports.srcPaths, mono.pkgs);
-  }
+  // if (mono.isAppIncluded) {
+  //   Array.prototype.push.apply(module.exports.srcPaths, mono.pkgs);
+  // }
   module.exports.useYarn = module.exports.useYarn || mono.isYarnWs;
 }
